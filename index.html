@@ -2,77 +2,151 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Τρικαλινή Λέσχη Προβληματισμού</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f6f8;
-            color: #333;
-            text-align: center;
-            margin: 0;
-            padding: 30px 15px;
-        }
+<title>Τρικαλινή Λέσχη Προβληματισμού</title>
 
-        .container {
-            max-width: 650px;
-            margin: 30px auto;
-            padding: 30px 20px;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-        }
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f4f7;
+    color: #333;
+    margin: 0;
+    padding: 20px 12px;
+}
 
-        .logo {
-            width: 180px;
-            max-width: 65%;
-            height: auto;
-            margin-bottom: 20px;
-        }
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 25px 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
 
-        h1 {
-            font-size: 27px;
-            line-height: 1.4;
-            color: #333;
-        }
+header {
+    text-align: center;
+    margin-bottom: 25px;
+}
 
-        h2 {
-            font-size: 21px;
-            font-weight: normal;
-            color: #555;
-            margin-top: 25px;
-        }
+.logo {
+    width: 150px;
+    max-width: 55%;
+    height: auto;
+}
 
-        p {
-            font-size: 18px;
-            line-height: 1.6;
-        }
-    </style>
+h1 {
+    font-size: 25px;
+    line-height: 1.4;
+}
+
+h2 {
+    font-size: 21px;
+    font-weight: normal;
+    color: #345b78;
+}
+
+p {
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+label {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0 8px;
+}
+
+input, textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px;
+    font-size: 18px;
+    border: 1px solid #bbb;
+    border-radius: 7px;
+    font-family: Arial, sans-serif;
+}
+
+textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 25px;
+    background: #345b78;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 19px;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.note {
+    font-size: 15px;
+    color: #666;
+    margin-top: 20px;
+}
+</style>
 </head>
 
 <body>
 
-    <div class="container">
+<div class="container">
 
-        <img src="logo.png" alt="Λογότυπο Τρικαλινής Λέσχης Προβληματισμού"
-             class="logo">
+<header>
+    <img src="logo.png" class="logo"
+         alt="Λογότυπο Λέσχης">
 
-        <h1>Τρικαλινή Λέσχη Προβληματισμού</h1>
+    <h1>Τρικαλινή Λέσχη Προβληματισμού</h1>
 
-        <h2>Σύστημα υποβολής ερωτήσεων</h2>
+    <h2>Υποβολή ερώτησης</h2>
+</header>
 
-        <p>
-            Καλώς ήρθατε!
-        </p>
+<p>
+Καλώς ήρθατε!
+</p>
 
-        <p>
-            Μέσω αυτής της εφαρμογής μπορείτε να υποβάλετε
-            τις ερωτήσεις σας προς τον ομιλητή.
-        </p>
+<p>
+Μπορείτε να υποβάλετε την ερώτησή σας προς τον ομιλητή.
+</p>
 
-    </div>
+<form>
+
+    <label for="question">Η ερώτησή σας *</label>
+
+    <textarea id="question"
+        placeholder="Γράψτε εδώ την ερώτησή σας..."
+        required></textarea>
+
+    <label for="name">Ονοματεπώνυμο (προαιρετικό)</label>
+
+    <input type="text" id="name"
+        placeholder="Το όνομά σας">
+
+    <label for="job">Επάγγελμα (προαιρετικό)</label>
+
+    <input type="text" id="job"
+        placeholder="Το επάγγελμά σας">
+
+    <button type="button" disabled>
+        Η υποβολή θα ενεργοποιηθεί σύντομα
+    </button>
+
+</form>
+
+<p class="note">
+Η αναγραφή του ονόματος και του επαγγέλματος
+είναι προαιρετική.
+</p>
+
+</div>
 
 </body>
 </html>
+
