@@ -43,7 +43,7 @@ h1 {
 
 h2 {
     font-size: 21px;
-    font-weight: normal;
+    font-weight: bold; <!-- normal -->
     color: #345b78;
 }
 
@@ -96,50 +96,34 @@ button {
 </head>
 
 <body>
-
 <div class="container">
-
 <header>
     <img src="logo.png" class="logo"
          alt="Λογότυπο Λέσχης">
-
     <h1>Τρικαλινή Λέσχη Προβληματισμού</h1>
-
     <h2>Υποβολή ερώτησης</h2>
 </header>
-
 <p>
 Καλώς ήρθατε!
 </p>
-
 <p>
 Μπορείτε να υποβάλετε την ερώτησή σας προς τον ομιλητή.
 </p>
-
 <form>
-
     <label for="question">Η ερώτησή σας *</label>
-
     <textarea id="question"
         placeholder="Γράψτε εδώ την ερώτησή σας..."
         required></textarea>
-
     <label for="name">Ονοματεπώνυμο (προαιρετικό)</label>
-
     <input type="text" id="name"
         placeholder="Ονοματεπώνυμο">  <!-- "Το όνομά σας" -->
-
     <label for="job">Επάγγελμα (προαιρετικό)</label>
-
     <input type="text" id="job"
         placeholder="Επάγγελμα"> <!-- "Το επάγγελμά σας" -->
-
     <button type="button" disabled>
         Η υποβολή θα ενεργοποιηθεί σύντομα
     </button>
-
 </form>
-
 <p class="note">
 Η αναγραφή του ονόματος και του επαγγέλματος
 είναι προαιρετική.
